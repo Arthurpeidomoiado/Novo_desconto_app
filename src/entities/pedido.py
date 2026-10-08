@@ -1,4 +1,4 @@
-from src.models.desconto import Desconto
+from src.entities.desconto import Desconto
 
 class Pedido:
     def __init__(self, cliente, desconto : Desconto):
