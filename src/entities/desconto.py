@@ -5,13 +5,16 @@ class IDesconto(ABC):
     def calcular(self, valor):
         pass
 class DescontoNormal(IDesconto):
-    def calcular(self,valor,sub):
+    desconto = 'Normal'
+    def calcular(self,valor):
         valor_desconto = valor * 0.1
-        valor_desconto =valor_desconto +  -sub
+        valor_desconto =valor_desconto 
         return valor_desconto
 class DescontoVIP(IDesconto):
+    desconto = 'Vip'
     def calcular(self, valor):
         return valor * 0.2
 class DescontoPremium(IDesconto):
+    desconto = 'Premium'
     def calcular(self,valor):
         return valor * 0.3
