@@ -1,7 +1,7 @@
 from src.entities.desconto import IDesconto
 
 class Pedido:
-    def __init__(self, cliente, valor_original, desconto : IDesconto):
+    def __init__(self, cliente: str, valor_original: float, desconto : IDesconto):
         self.cliente = cliente
         self.desconto = desconto
         self.valor_original = valor_original

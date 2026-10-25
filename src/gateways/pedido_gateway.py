@@ -4,7 +4,7 @@ from src.entities.pedido import Pedido
 
 class IPedidoGateway(abc.ABC):
     @abc.abstractmethod
-    def salvar(self, pedido: Pedido, tipo_desconto: str) -> None:
+    def salvar(self, pedido: Pedido) -> None:
         pass
 
     @abc.abstractmethod

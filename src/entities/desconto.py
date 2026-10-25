@@ -1,20 +1,15 @@
 from abc import ABC, abstractmethod
 
 class IDesconto(ABC):
-    @abstractmethod
-    def calcular(self, valor):
+    @abc.abstractmethod
+    def calcular(self, valor :float)-> float:
         pass
 class DescontoNormal(IDesconto):
-    desconto = 'Normal'
-    def calcular(self,valor):
-        valor_desconto = valor * 0.1
-        valor_desconto =valor_desconto 
-        return valor_desconto
+    def calcular(self,valor: float)-> float:
+        return valor * 0.1
 class DescontoVIP(IDesconto):
-    desconto = 'Vip'
-    def calcular(self, valor):
+    def calcular(self, valor: float)-> float:
         return valor * 0.2
 class DescontoPremium(IDesconto):
-    desconto = 'Premium'
-    def calcular(self,valor):
+    def calcular(self,valor: float)-> float:
         return valor * 0.3
